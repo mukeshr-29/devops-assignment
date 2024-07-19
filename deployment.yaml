@@ -15,5 +15,10 @@ spec:
       containers:
       - name: ollama
         image: mukeshr29/ollama-task
+        resources:
+              requests:
+                cpu: "250m"  
+              limits:
+                cpu: "500m"
         ports:
         - containerPort: 5000
