@@ -1,4 +1,4 @@
-Overview
+Overview                                                                                                                                                                                   
 This project involves deploying an Ollama service on Kubernetes, setting up Horizontal Pod Autoscaler (HPA), and conducting load testing. The goal is to ensure that the service scales effectively under various load conditions and meets performance requirements.
 
 Implementation
@@ -33,7 +33,7 @@ k6 run <test-script-file_name>
 ![Screenshot 2024-07-19 200335](https://github.com/user-attachments/assets/81c0129c-11be-475e-aff3-21ad5a88db63)
 
 
-Conclusion
+Conclusion                                                                                                                                                                                 
 This project demonstrates the deployment and scaling of a service using Kubernetes and load testing to ensure performance and stability. By following the documented best practices and setup instructions, you can reproduce the setup and perform similar testing.
 
 
