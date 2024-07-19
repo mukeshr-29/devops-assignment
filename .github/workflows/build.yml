@@ -28,4 +28,20 @@ jobs:
           password: ${{secrets.DOCKERHUB_TOKEN}}
       - name: docker image push 
         run: docker push mukeshr29/ollama-task:latest
+      
+  deploy:
+    name: deploy to k8s
+    needs: build
+    runs-on: my-runner
+    steps:
+      - name: deploy application to kubeAdm
+        uses: tale/kubectl-action@v1
+        with:
+          base64-kube-config: ${{ secrets.KUBE_CONFIG }}
+      - run: |
+          kubectl create ns devops-assignment
+          kubectl apply -f deployment.yml -n devops-assignment
+          kubectl apply -f service.yml -n devops-assignment
+          kubectl apply -f hpa.yml -n devops-assignment
+
 
