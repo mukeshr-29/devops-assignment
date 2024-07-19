@@ -18,7 +18,7 @@ jobs:
       - name: file system scanning
         run: trivy fs --format table -o trivy-fs-report.html .
       - name: docker img build & tag
-        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/ollama-task:latest .
+        run: docker build -t mukeshr29/ollama-task:latest .
       - name: docker image scanning
         run: trivy image --format table -o trivy-img-report.html ${{ secrets.DOCKERHUB_USERNAME }}/ollama-task:latest
       - name: login to docker registry
