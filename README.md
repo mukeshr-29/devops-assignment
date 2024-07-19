@@ -16,15 +16,15 @@ Horizontal Pod Autoscaler (HPA):
 An HPA is configured to scale the Ollama deployment based on CPU utilization.
 The HPA configuration is in hpa.yaml.
 
-CI/CD Pipeline
+CI/CD Pipeline                                                                                                                                                                             
 In this task I have used GitHub actions as my ci/cd tool. The CI/CD pipeline using GitHub Actions automates the process of building, testing, and deploying the service. By adhering to best practices and utilizing automated workflows, you can ensure efficient and reliable deployments.
 
-Kubectl Commands used
-kubectl apply -f deployment.yaml -n devops-assignment
-kubectl apply -f service.yaml -n devops-assignment
-kubectl apply -f hpa.yaml -n devops-assignment
+Kubectl Commands used                                                                                                                                                                      
+kubectl apply -f deployment.yaml -n devops-assignment                                                                                                                                      
+kubectl apply -f service.yaml -n devops-assignment                                                                                                                                         
+kubectl apply -f hpa.yaml -n devops-assignment                                                                                                                                             
 
-k6 Load test commands used 
+k6 Load test commands used                                                                                                                                                                 
 k6 run <test-script-file_name>
 ![Screenshot 2024-07-19 200002](https://github.com/user-attachments/assets/824f3cc6-9c26-4186-8243-93148b9c4b83)
 ![Screenshot 2024-07-19 200226](https://github.com/user-attachments/assets/d195d9ae-8066-4176-9352-f64a090d4582)
