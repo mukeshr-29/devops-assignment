@@ -13,6 +13,8 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
       - name: file system scanning
         run: trivy fs --format table -o trivy-fs-report.html .
       - name: docker img build & tag
