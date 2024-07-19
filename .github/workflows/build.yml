@@ -39,6 +39,7 @@ jobs:
         with:
           base64-kube-config: ${{ secrets.KUBE_CONFIG }}
       - run: |
+          kubectl create ns devops-assignment
           kubectl apply -f deployment.yaml -n devops-assignment
           kubectl apply -f service.yaml -n devops-assignment
           kubectl apply -f hpa.yaml -n devops-assignment
